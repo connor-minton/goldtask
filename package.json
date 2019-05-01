@@ -1,0 +1,23 @@
+{
+  "name": "@cminton/task-reward-tracker",
+  "version": "0.0.0",
+  "description": "Helps you reinforce your good habits!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "task": "index.js"
+  },
+  "keywords": [
+    "reinforcement",
+    "tasks",
+    "todo",
+    "game"
+  ],
+  "author": "Connor Minton",
+  "license": "ISC",
+  "dependencies": {
+    "argparse": "^1.0.10"
+  }
+}

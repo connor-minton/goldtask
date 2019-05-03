@@ -3,6 +3,8 @@
 const argparse = require('argparse');
 const path = require('path');
 const repos = require('./lib/yaml-repo');
+const inquirer = require('inquirer');
+inquirer.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'));
 
 main();
 

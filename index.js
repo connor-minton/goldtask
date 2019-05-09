@@ -20,7 +20,7 @@ async function main() {
   const commands = {
     earn: require('./lib/commands/earn')(subparsers),
     redeem: require('./lib/commands/redeem')(subparsers),
-    view: require('./lib/commands/view')(subparsers)
+    status: require('./lib/commands/status')(subparsers)
   };
 
   const args = cli.parseArgs();

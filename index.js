@@ -2,13 +2,23 @@
 
 const argparse = require('argparse');
 const path = require('path');
+const os = require('os');
 const repos = require('./lib/yaml-repo');
+const init = require('./lib/init');
 const inquirer = require('inquirer');
 inquirer.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'));
 
-main();
+const RC_PATH = path.join(os.homedir(), '.goldrc');
+
+main()
+  .catch(e => {
+    console.error('error: There was an unhandled exception:', e);
+    process.exit(1);
+  });
 
 async function main() {
+  init(RC_PATH);
+
   const cli = new argparse.ArgumentParser({
     version: '0.0.0',
     addHelp: true,

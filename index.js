@@ -20,7 +20,7 @@ async function main() {
   init(RC_PATH);
 
   const cli = new argparse.ArgumentParser({
-    version: '0.0.0',
+    version: '0.0.1',
     addHelp: true,
     description: 'A rewards system that helps you reinforce your good habits!'
   });

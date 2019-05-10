@@ -1,5 +1,5 @@
 {
-  "name": "@cminton/task-reward-tracker",
+  "name": "goldtask",
   "version": "0.0.0",
   "description": "A rewards system that helps you reinforce your good habits!",
   "main": "index.js",

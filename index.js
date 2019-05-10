@@ -27,6 +27,12 @@ async function main() {
 
   const subparsers = cli.addSubparsers({ dest: 'cliCommand', help: 'sub-commands' });
 
+  // hack to make `status` the default sub-command
+  if (process.argv.length === 2) {
+    process.argv.push('status');
+    console.log('(For help, run `gold -h`)');
+  }
+
   const commands = {
     earn: require('./lib/commands/earn')(subparsers),
     redeem: require('./lib/commands/redeem')(subparsers),

@@ -43,7 +43,7 @@ async function main() {
 
   let action;
   try {
-    action = require(path.resolve('lib', 'actions', args.cliCommand));
+    action = require(path.join(__dirname, 'lib', 'actions', args.cliCommand));
   }
   catch (e) {
     cli.error('could not find an action for the sub-command');

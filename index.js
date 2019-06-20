@@ -2,13 +2,13 @@
 
 const argparse = require('argparse');
 const path = require('path');
-const os = require('os');
 const repos = require('./lib/yaml-repo');
 const init = require('./lib/init');
 const inquirer = require('inquirer');
+const appConfig = require('./lib/app-config');
 inquirer.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'));
 
-const RC_PATH = path.join(os.homedir(), '.goldrc');
+const RC_PATH = appConfig.rcPath;
 
 main()
   .catch(e => {
@@ -17,7 +17,7 @@ main()
   });
 
 async function main() {
-  init(RC_PATH);
+  await init(RC_PATH);
 
   const cli = new argparse.ArgumentParser({
     version: '0.0.2',

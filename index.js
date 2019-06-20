@@ -51,5 +51,5 @@ async function main() {
 
   await action(args, commands[args.cliCommand]);
 
-  repos.saveAll();
+  await repos.saveAll();
 }

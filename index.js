@@ -2,7 +2,7 @@
 
 const argparse = require('argparse');
 const path = require('path');
-const repos = require('./lib/yaml-repo');
+const repos = require('./lib/yaml-store');
 const init = require('./lib/init');
 const inquirer = require('inquirer');
 const appConfig = require('./lib/app-config');
